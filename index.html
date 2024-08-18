@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My JS</title>
+</head>
+<body>
+<h1>
+  Lorem ipsum dolor sit amet.
+</h1>
+<script type="module">
+   import { sumArray, doubleArrayElements, SkillsManager, DateCalculator } from './js/main.js'
+
+   // #1
+
+   const exampleArray = [1, 2, 3, 4, 5]
+   const sum = sumArray(exampleArray)
+   console.log('Сума елементів масиву:', sum) // Виведення суми
+
+   // #2
+
+   const inputArray = [1, 2, 3, 4, 5];
+   const doubleArray = doubleArrayElements(inputArray);
+   console.log('Масив із подвоєними елементами:', doubleArray); // Виведення подвоєних елементів
+
+   // #3
+
+   const skillsManager = new SkillsManager()
+
+   console.log(skillsManager.addSkill('JavaScript'));
+   console.log(skillsManager.addSkill('CSS'));
+   console.log(skillsManager.getAllSkills());
+
+   // #4
+
+   const dateCalculator = new DateCalculator('2023-01-01')
+   dateCalculator.addDays(5)
+   console.log(dateCalculator.getResult()) // Виводить нову дату після додавання днів
+
+   dateCalculator.subtractDays(3)
+   console.log(dateCalculator.getResult()) // Виводить нову дату після віднімання днів
+</script>
+</body>
+</html>
